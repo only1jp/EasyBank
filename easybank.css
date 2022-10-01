@@ -7,9 +7,27 @@
   background-color: #fff;
   width: 100%;
   top: 0;
+  padding: 3px 0px;
 }
 
-.menu {
+.navbar li::after {
+  content: "";
+  position: absolute;
+  background: green;
+  /* z-index: -1; */
+  height: 15%;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  transform: translateY(20px);
+  transition: all 0.5s;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+
+.top1 .menu {
   display: none;
 }
 
@@ -21,6 +39,7 @@
 .navbar li {
   list-style: none;
   cursor: pointer;
+  position: relative;
 }
 
 .cover {
@@ -121,7 +140,30 @@ button {
   color: white;
   font-size: 10px;
   cursor: pointer;
+  letter-spacing: 0.1em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  transition: 0.5s;
+  /* position: relative; */
 }
+
+button:hover {
+  color: green;
+  letter-spacing: 0.05em;
+}
+
+/* button span {
+  position: absolute;
+  display: block;
+  background: green;
+}
+
+button span:nth-child(1) {
+  left: 0;
+  top: 0;
+  width: 50.5%;
+  height: 1.5em;
+} */
 
 .details img {
   height: 150px;
